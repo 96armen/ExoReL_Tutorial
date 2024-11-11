@@ -1,0 +1,64 @@
+%   [STAR]    %
+Rs                                  1
+Ms                                  1
+Ts                                  5760
+% star distance from Sun [pc]
+distance                            10.
+% star metallicity [M/H]
+meta                                0
+
+%   [PLANET]  %
+name_p                              Earth
+major-a                             1
+Rp                                  0.089
+Rp_err                              None
+eccentricity                        0
+Mp                                  0.003
+Mp_err                              None
+P0                                  1e5
+Ag                                  0.05
+% phase angle
+phi                                 60.0
+
+%   [GENERAL_PAR]     %
+wave_file                           tutorial_grid
+output_directory                    /
+file_output_name                    modern_spectrum
+
+%   [ATMOSPHERIC_PAR]   %
+% Number of layers in which the atmosphere is divided
+use_adaptive_grid                   True
+n_layer                             100
+% Eddy diffusion coefficient in m2/s
+KE                                  1.0
+% the opar is to correct the Rossland mean opacity at low pressure
+opar                                3.0
+
+% clouds %
+fit_wtr_cld                         True
+fit_amm_cld                         False
+cld_frac                            0.5
+adjust_VMR_gases                    True
+pH2O                                4.85
+dH2O                                4.3
+crH2O                               -3
+% molecules %
+vmr_H2O                             0.01
+vmr_CH4                             0.000002
+vmr_CO2                             0.0004
+vmr_O2                              0.21
+vmr_O3                              0.000001
+
+gas_fill                            N2
+
+%   [MODEL_PAR]     %
+use_adaptive_grid                   True
+n_layer                             100
+albedo_calc                         False
+fp_over_fs                          True
+
+add_noise                           True
+gaussian_noise                      False
+noise_model                         1
+snr                                 20.
+return_bins                         False
